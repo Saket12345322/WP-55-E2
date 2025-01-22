@@ -1,57 +1,63 @@
-<html><head>
-    <title>Biodata</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+<h1><center><img src="C:\Users\student\Documents\image 7.jpg"width=30 height=30>IMAGE GALLERY</center></h1>
+    <style>
+        body {
+            font-family: italic, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        @media screen and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>SAKET SHRIVASTAVA</h1>
-    <h2>DIV: E</h2>
-    <h3>Roll No.: 55</h3>
-    <p>As an engineering student, you might struggle to showcase relevant experience 
-    amidst academic projects and limited work history. 
-    Our guide will help you highlight your technical skills and academic achievements
-     to construct a compelling narrative that resonates with engineering employers.</p>
-     <br>
-     <h1> IMAGES </h1>
-    <img src="C:\Users\student\Desktop\photo.jpeg" height="250px" width="250px">
-
-    <br>
-    
-    <ul><h1> Achievements</h1></ul>
-    <table border="5px">
-        <tbody><tr>
-            <th>Sr. No.</th>
-            <th>STD</th>
-            <th>College</th>
-            <th>Percentage</th>
-        </tr>
-        <tr>
-            <td>01</td>
-            <td>10th</td>
-            <td>Saraswati Vishwa Vidyalaya</td>
-            <td>77</td>
-        </tr>
-        <tr>
-            <td>02</td>
-            <td>12th</td>
-            <td>Pratibha Jr College</td>
-            <td>80</td>
-        </tr>
-        <tr>
-            <td>03</td>
-            <td>FY</td>
-            <td>pimpri chinchwad univercity</td>
-            <td>7.5</td>
-        </tr>
-    </tbody></table>
-    <ol type="A">
-        <li>C</li>
-        <li>C++</li>
-        <li>HTML</li>
-    </ol>
-    <ul type="Circle">
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>Bootstrap</li>
-    </ul>
-
-
-</body></html>
+    <div class="gallery">
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 1.jpg" alt="Image 1"></div>
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 2.jpg" alt="Image 2"></div>
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 4.jpg" alt="Image 4"></div>
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 5.jpg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="C:\Users\student\Documents\image 6.jpg" alt="Image 6"></div>
+    </div>
+</body>
+</html>
